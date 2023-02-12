@@ -10,7 +10,7 @@ const Search = ({ countries, onSearch }) => {
       alert("Please enter something");
     } else {
       const results = countries.filter((country) =>
-        country.name.toLowerCase().includes(text.toLowerCase())
+        country.name.official.toLowerCase().includes(text.toLowerCase())
       );
       onSearch(results);
     }
